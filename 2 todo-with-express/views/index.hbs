@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+
+    <style>
+        form,
+        ul {
+            width: 40%;
+            margin: 0 auto;
+            border: 2 px solid red;
+            background: rgb(204, 12, 204);
+            text-align: center;
+        }
+        
+        h1,li {
+            color: rgb(40, 207, 40);
+            list-style-type: none;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        
+        input {
+            width: 300px;
+            height: 40px;
+            padding: 5px;
+            background-color: rgb(40, 207, 40);
+            color: rgb(179, 29, 179);
+            font-size: 30px;
+        }
+        
+        button {
+            width: 300px;
+            height: 30px;
+            padding: 5px;
+            background-color: rgb(40, 207, 40);
+            color: rgb(179, 29, 179);
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="/" method="POST">
+        <h1>Make Your Todo List</h1>
+        <input type="text" name="newtask"><br><br>
+        <input type="submit" value="Add Task">
+    </form><br>
+    <h1>Your Tasks</h1>
+    <ul>
+        {{#each tasks as |t|}}
+            <li>
+                {{t}}
+            </li>
+        {{/each}}
+    </ul>
+    <script src="server.js"></script>
+</body>
+
+</html>
