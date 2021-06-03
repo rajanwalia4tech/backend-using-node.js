@@ -1,0 +1,13 @@
+body{
+	background-color: lightgreen;
+	text-align: center;
+	color: blue;
+}
+
+li{
+	list-style: none;
+	border: 2px solid red;
+	background: aqua;
+	font-family: sans-serif;
+	
+}

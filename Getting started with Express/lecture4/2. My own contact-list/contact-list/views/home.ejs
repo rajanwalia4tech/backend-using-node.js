@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title><%= locals.title %> </title>
+	<link rel="stylesheet" href="/css/home.css">
+	
+</head>
+<body>
+	<h1>Contact List</h1>
+	<% for( let contact of contact_list) { %>
+		<div>
+			<%= contact.name %> 
+			<%= contact.class %>
+			<a href="/delete-contact/?name=<%= contact.name %> ">delete</a> <br>
+			 <!-- <a href="/delete-contact/<%= contact.name %> ">delete</a> <br> -->
+		</div>
+			
+		<li>
+
+		</li>
+	<% } %>
+	
+	<form action="/create-contact" method="POST">
+		<input type="text" name="name" required>
+		<input type="text" name="class" id="" required>
+		<input type="submit" value="Add Student">
+	</form>
+	<script src="/js/home.js"></script>
+</body>
+</html>
