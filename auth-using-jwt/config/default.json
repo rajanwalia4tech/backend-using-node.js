@@ -1,0 +1,10 @@
+{
+    "PORT":"5000",
+    "MYSQL":{
+        "HOST":"localhost",
+        "DATABASE":"authusingjwt",
+        "user":"mytestuser",
+        "PASSWORD":"mypassword"
+    },
+    "JWT_KEY" : "anysecretstring"
+}
