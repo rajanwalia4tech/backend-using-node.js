@@ -31,7 +31,7 @@ const create = async (req,res)=>{
         return res.header("x-auth-token",token).send({name,email});
     }catch(err){
         return res.status(404).json({
-            error:err
+            error:err.message
         })
     }
 }
@@ -61,7 +61,7 @@ const login = async (req,res)=>{
         return res.status(200).send({"token":token})
     }catch(err){
         return res.status(404).json({
-            error:err
+            error:err.message
         })
     }
 }
@@ -74,7 +74,7 @@ const getAllUsers = async (req,res)=>{
         return res.status(200).json(result);
     }catch(err){
         return res.status(404).json({
-            error : err
+            error : err.message
         })
     }
 }
@@ -87,7 +87,7 @@ const getUser = async(req,res)=>{
         return res.status(200).json(result);
     }catch(err){
         return res.status(404).json({
-            error : err
+            error : err.message
         })
     }
 }
